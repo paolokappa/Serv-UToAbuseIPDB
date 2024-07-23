@@ -1,7 +1,5 @@
-# Serv-UToAbuseIPDB
-Sending Malicious IPs to AbuseIPDB from SolarWinds Serv-U FTP Server
-
-# Serv-UToAbuseIPDB: Sending Malicious IPs to AbuseIPDB
+# SolarWinds Serv-U FTP Server To AbuseIPDB
+Sending Malicious IPs to AbuseIPDB from SolarWinds Serv-U FTP Server.
 
 ## Purpose
 This manual provides detailed instructions on how to configure an event in SolarWinds Serv-U FTP Server to automatically report IP addresses involved in brute-force attempts to AbuseIPDB using a PowerShell script named `Serv-UToAbuseIPDB`. By automating this process, administrators can enhance their server's security by ensuring that malicious IP addresses are promptly reported and potentially blocked from further attacks.
@@ -25,7 +23,7 @@ This manual provides detailed instructions on how to configure an event in Solar
 - In the Actions section of the event configuration, select `Execute Command`.
 
 ### 6. Configure the Command Execution
-- **Command:** Enter the path to the PowerShell executable, typically `powershell.exe`.
+- **Command:** Enter the path to the PowerShell executable, typically `powershell.exe` (C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe)
 - **Arguments:** Enter the script path and the `$IP` variable. The complete argument string should look like this:
   ```plaintext
   -File "C:\Path\To\Serv-UToAbuseIPDB.ps1" -ipAddress "$IP"
